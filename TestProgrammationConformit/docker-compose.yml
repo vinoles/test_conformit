@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  postgres.data:
+    image: postgres
+
+  testprogrammationconformit:
+    image: ${DOCKER_REGISTRY-}testprogrammationconformit
+    build:
+      context: .
+      dockerfile: TestProgrammationConformit/Dockerfile
